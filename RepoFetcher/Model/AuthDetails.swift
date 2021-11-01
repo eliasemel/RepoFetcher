@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+/// Represents auth details response 
 struct AuthDetails: Decodable {
 	let access_token: String
 }

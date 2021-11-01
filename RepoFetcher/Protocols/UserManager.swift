@@ -8,9 +8,16 @@
 import Foundation
 import Combine
 protocol UserManager {
+	
 	/// Provides synchronous access to the current user details
 	var userState: UserState { get }
+	
+	
+	/// Publishes change in `UserState`
 	var userStatePublisher: AnyPublisher<UserState, Never> { get }
+	
+	
+	/// Performs authentication of user
 	func authenticateUser(code: String)
 	
 	
